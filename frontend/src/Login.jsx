@@ -19,10 +19,9 @@ const Login = () => {
 
   return (
     <div className="login-page">
-      {/* Logo Container - Positioned at top-left */}
       <div className="logo-container">
         <img src={Logo} alt="Fraud Detection Logo" className="logo" />
-        <h1>FraudDetection</h1>
+        <h1>FraudFolio</h1>
       </div>
 
       <div className="login-left">
