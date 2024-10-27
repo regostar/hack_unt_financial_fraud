@@ -25,3 +25,10 @@ The app is structured as a full-stack web application with a robust AI-driven ba
 3. **Backend**: Flask and Python handle real-time fraud predictions and API interactions.
 4. **Frontend**: Built with React for an intuitive user experience.
 5. **Database**: MongoDB stores transaction data and flags for efficient tracking and retrieval.
+
+--
+
+## 🔮 What's Next for Fraud Folio
+1. **Enhancing Model Accuracy**: Continuously training and fine-tuning the model.
+2. **Scalability**: Improving the app's performance to handle larger datasets.
+3. **Partnerships**: Collaborating with financial institutions to maximize the impact of Fraud Folio.
