@@ -1,6 +1,10 @@
 # Fraud Folio  
 An AI-powered fraud detection system that uses advanced machine learning models to predict and prevent credit card fraud in real-time.
 
+## Demo Video :- 
+
+https://drive.google.com/file/d/1TALJEVKmtv5y0axhcIqVvMxKyydeBPO_/view?usp=sharing
+
 ## 🌟 Inspiration
 As digital transactions become more prevalent, so does the risk of fraud. Fraud Folio was created to harness the power of AI in combating credit card fraud, aiming to protect users and financial institutions by identifying and flagging suspicious activity before it leads to loss.
 
