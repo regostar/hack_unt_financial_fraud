@@ -64,7 +64,7 @@ const UploadPage = () => {
     <div className="upload-page halloween-theme">
       <header className="header">
         <img src={Logo} alt="Fraud Detection Logo" className="logo" />
-        <h1>FraudDetection</h1>
+        <h1>FraudFolio</h1>
       </header>
 
       <h2>Upload Your File</h2>
