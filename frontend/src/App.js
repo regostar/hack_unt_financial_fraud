@@ -1,27 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
+import LandingPage from './landingpage';
+import Login from './Login';
+import UploadPage from './UploadPage'; 
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          React Loading
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/Landingpage" element={<LandingPage />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/upload" element={<UploadPage />} /> 
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
 export default App;
-
