@@ -31,7 +31,7 @@ The app is structured as a full-stack web application with a robust AI-driven ba
 Primary -
 
 - [Credit Card Fraud Dataset](https://www.kaggle.com/datasets/teamincribo/credit-card-fraud)
-- 
+
 Other -
 
 - [Fraud Detection Dataset](https://www.kaggle.com/datasets/kartik2112/fraud-detection)
