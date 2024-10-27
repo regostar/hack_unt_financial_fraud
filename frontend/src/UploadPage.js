@@ -18,7 +18,7 @@ const UploadPage = () => {
       setFile(selectedFile);
       setError('');
     } else {
-      setError('Please upload a CSV file up to 10 MB.');
+      setError('Please upload a CSV file up to 20 MB.');
       setFile(null);
     }
   };
@@ -42,15 +42,14 @@ const UploadPage = () => {
         withCredentials: true
       });
       
-      // alert(response.data)
-      console.log(response.data)
+      console.log(response.data);
 
       if (response.data) {
         setStatus('success');
         setTotalTransactions(response.data.total_transactions);
         setSuspiciousTransactions(response.data.suspicious_transactions_count);
         setSuspiciousTransactionsList(response.data.suspicious_transactions || []);
-        alert("completed")
+        alert("Upload completed");
       } else {
         throw new Error('Unexpected response format');
       }
@@ -63,6 +62,16 @@ const UploadPage = () => {
     }
   };
 
+  const getFraudProbabilityDisplay = (probability) => {
+    if (probability > 0.345) {
+      return { text: "Fraud Alert", color: "red" };
+    } else if (probability >= 0.30) {
+      return { text: "Less Probability", color: "yellow" };
+    } else {
+      return { text: "Low Probability", color: "green" };
+    }
+  };
+
   return (
     <div className="upload-page halloween-theme">
       <header className="header">
@@ -71,7 +80,7 @@ const UploadPage = () => {
       </header>
 
       <h2>Upload Your File</h2>
-      <p>CSV files Up to 10 MB</p>
+      <p>CSV files Up to 20 MB</p>
       <input type="file" accept=".csv" onChange={handleFileChange} />
       {error && <p className="error">{error}</p>}
       
@@ -96,7 +105,7 @@ const UploadPage = () => {
 
       {totalTransactions !== null && suspiciousTransactions !== null && (
         <div className="transaction-info">
-          <p>Total transactions: {setTotalTransactions}</p>
+          <p>Total transactions: {totalTransactions}</p>
           <p>Suspicious transactions: {suspiciousTransactions}</p>
         </div>
       )}
@@ -108,26 +117,25 @@ const UploadPage = () => {
             <thead>
               <tr>
                 <th>Transaction ID</th>
-                <th>Amount</th>
-                <th>Currency</th>
-                <th>Date and Time</th>
                 <th>Cardholder Name</th>
-                <th>Merchant Name</th>
+                <th>Device</th>
                 <th>Fraud Probability</th>
               </tr>
             </thead>
             <tbody>
-              {suspiciousTransactionsList.map((transaction) => (
-                <tr key={transaction['Transaction ID']}>
-                  <td>{transaction['Transaction ID']}</td>
-                  <td>{transaction['Transaction Amount']}</td>
-                  <td>{transaction['Transaction Currency']}</td>
-                  <td>{transaction['Transaction Date and Time']}</td>
-                  <td>{transaction['Cardholder Name']}</td>
-                  <td>{transaction['Merchant Name']}</td>
-                  <td>{(transaction['Fraud_Probability'] * 100).toFixed(2)}%</td>
-                </tr>
-              ))}
+              {suspiciousTransactionsList.map((transaction) => {
+                const fraudProbability = getFraudProbabilityDisplay(transaction.Fraud_Probability);
+                return (
+                  <tr key={transaction['Transaction ID']}>
+                    <td>{transaction['Transaction ID']}</td>  
+                    <td>{transaction['Name']}</td>
+                    <td>{transaction['Device']}</td>
+                    <td style={{ color: fraudProbability.color }}>
+                      {fraudProbability.text}
+                    </td>
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
         </div>
