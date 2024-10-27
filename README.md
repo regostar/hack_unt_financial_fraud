@@ -5,6 +5,10 @@ An AI-powered fraud detection system that uses advanced machine learning models 
 
 https://drive.google.com/file/d/1TALJEVKmtv5y0axhcIqVvMxKyydeBPO_/view?usp=sharing
 
+## UI Design: - 
+
+https://app.visily.ai/projects/791263dc-da3f-4875-a185-83db894b352c/boards/1374212
+
 ## 🌟 Inspiration
 As digital transactions become more prevalent, so does the risk of fraud. Fraud Folio was created to harness the power of AI in combating credit card fraud, aiming to protect users and financial institutions by identifying and flagging suspicious activity before it leads to loss.
 
