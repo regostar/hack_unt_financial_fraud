@@ -14,7 +14,7 @@ const UploadPage = () => {
 
   const handleFileChange = (e) => {
     const selectedFile = e.target.files[0];
-    if (selectedFile && selectedFile.type === 'text/csv' && selectedFile.size <= 20485760) {
+    if (selectedFile && selectedFile.type === 'text/csv' && selectedFile.size <= 10485760) {
       setFile(selectedFile);
       setError('');
     } else {
@@ -41,16 +41,13 @@ const UploadPage = () => {
         },
         withCredentials: true
       });
-      
-      // alert(response.data)
-      console.log(response.data)
 
-      if (response.data) {
+
+      if (parsedData && typeof parsedData === 'object') {
         setStatus('success');
-        setTotalTransactions(response.data.total_transactions);
-        setSuspiciousTransactions(response.data.suspicious_transactions_count);
-        setSuspiciousTransactionsList(response.data.suspicious_transactions || []);
-        alert("completed")
+        setTotalTransactions(parsedData.total_transactions);
+        setSuspiciousTransactions(parsedData.suspicious_transactions_count);
+        setSuspiciousTransactionsList(parsedData.suspicious_transactions || []);
       } else {
         throw new Error('Unexpected response format');
       }
@@ -96,7 +93,7 @@ const UploadPage = () => {
 
       {totalTransactions !== null && suspiciousTransactions !== null && (
         <div className="transaction-info">
-          <p>Total transactions: {setTotalTransactions}</p>
+          <p>Total transactions: {totalTransactions}</p>
           <p>Suspicious transactions: {suspiciousTransactions}</p>
         </div>
       )}
