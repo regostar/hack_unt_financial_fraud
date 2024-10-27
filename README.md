@@ -27,6 +27,15 @@ The app is structured as a full-stack web application with a robust AI-driven ba
 5. **Database**: MongoDB stores transaction data and flags for efficient tracking and retrieval.
 
 --
+## 📊 Datasets
+Primary -
+- [Credit Card Fraud Dataset](https://www.kaggle.com/datasets/teamincribo/credit-card-fraud)
+Other -
+- [Fraud Detection Dataset](https://www.kaggle.com/datasets/kartik2112/fraud-detection)
+- [Fraud E-commerce Dataset](https://www.kaggle.com/datasets/vbinh002/fraud-ecommerce)
+- [BankSim1 Dataset](https://www.kaggle.com/datasets/ealaxi/banksim1)
+
+
 
 ## 🔮 What's Next for Fraud Folio
 1. **Enhancing Model Accuracy**: Continuously training and fine-tuning the model.
