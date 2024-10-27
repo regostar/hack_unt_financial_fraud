@@ -1,0 +1,198 @@
+.login-page {
+    display: flex;
+    height: 100vh;
+    background-color: #f8f9fc;
+    font-family: Arial, sans-serif;
+  }
+  
+
+  .logo-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  p {
+    color: #555;
+  }
+  
+  .login-left {
+    width: 50%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 80px; 
+    background-color: #fdefeb;
+  }
+
+  .signup-link {
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .signup-link a {
+    color: #6366f1;
+    text-decoration: none;
+  }
+  
+  .signup-link a:hover {
+    text-decoration: underline;
+  }
+  
+  
+  .login-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .input-group {
+    margin-bottom: 15px;
+  }
+  
+  .input-group label {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .login-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .login-options label input[type="checkbox"] {
+    vertical-align: middle; 
+    margin: 0; 
+    padding: 0; 
+  }
+  
+  .login-options label {
+    display: flex;
+    align-items: center;
+    gap: 5px; 
+    white-space: nowrap;
+  }
+  
+  .forgot-password {
+    color: #6366f1;
+    text-decoration: none;
+  }
+  
+  .login-button {
+    background-color: #dbd3f2;
+    color: #fff;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .social-login {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .social-login p {
+    margin-bottom: 10px;
+    color: #555;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .social-button {
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .google {
+    background-color: #ea4335;
+    color: #fff;
+  }
+  
+  .facebook {
+    background-color: #3b5998;
+    color: #fff;
+  }
+  
+  .apple {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .login-right {
+    width: 50%;
+    background-color: #dbd3f2;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .info-section {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .chart-placeholder {
+    background: white;
+    width: 80%;
+    height: 60%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-left: 20px; /* Shift chart to the right */
+  }
+  
+  .chart-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .info-section h3 {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
