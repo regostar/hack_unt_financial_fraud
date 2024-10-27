@@ -8,7 +8,7 @@ const LandingPage = () => {
       <div className="landing-page">
         <header className="header">
           <img src={Logo} alt="Fraud Detection Logo" className="logo" />
-          <h1>FraudDetection</h1>
+          <h1>FraudFolio</h1>
         </header>
   
         <div className="text-content">
