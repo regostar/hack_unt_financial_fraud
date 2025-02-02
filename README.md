@@ -1,5 +1,5 @@
 # Fraud Folio  
-An AI-powered fraud detection system that uses advanced machine learning models to predict and prevent credit card fraud in real-time.
+An AI-powered fraud detection system that uses LLMs to predict and prevent credit card fraud in real-time.
 
 ## Demo Video :- 
 
